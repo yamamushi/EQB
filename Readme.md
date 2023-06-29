@@ -27,15 +27,13 @@ Books available for use are:
 * [liber-xxvii](https://hermetic.com/crowley/libers/lib27) - Liber Trigrammaton
 * [liber-xxxi](https://hermetic.com/crowley/libers/lib31) - Liber XXXI
 
-
-See also:
-
-* [The Holy Books of Thelema](https://en.wikipedia.org/wiki/The_Holy_Books_of_Thelema)
-* [Technical Libers of Thelema](https://hermetic.com/crowley/libers/index)
-
 # Add to your server 
 
 To invite EQB to your Discord Server, [Click Here](https://discord.com/oauth2/authorize?client_id=1123814132559380590&scope=bot&permissions=532576331840).
 
+# See also
+
+* [The Holy Books of Thelema](https://en.wikipedia.org/wiki/The_Holy_Books_of_Thelema)
+* [Technical Libers of Thelema](https://hermetic.com/crowley/libers/index)
 
 
