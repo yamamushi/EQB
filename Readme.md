@@ -6,7 +6,9 @@ It is based on the work of [tslight](https://github.com/tslight) and his [New Ae
 
 # Usage
 
-The bot is invoked with the `/eqb` command. The following subcommands are available:
+The bot is invoked with the `/eqb` command. 
+
+The following options are available:
 
 * `book` - Set the book to use for lookups
 * `count` - Set the number of results to return (max 32)
