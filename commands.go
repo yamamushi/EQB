@@ -1,37 +1,43 @@
 package main
 
 import (
-	"fmt"
 	"github.com/bwmarrin/discordgo"
-	"strings"
 )
 
-// This function will be called (due to AddHandler above) every time a new
-// message is created on any channel that the authenticated bot has access to.
-func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
-
-	// Ignore all messages created by the bot itself
-	// This isn't required in this specific example but it's a good practice.
-	if m.Author.ID == s.State.User.ID {
-		return
+var (
+	Commands = []*discordgo.ApplicationCommand{
+		{
+			Name:        "eqb",
+			Description: "Use English Qabalah Bot to search for words in a given book",
+			Options: []*discordgo.ApplicationCommandOption{
+				{
+					Type:        discordgo.ApplicationCommandOptionString,
+					Name:        "words",
+					Description: "Words to search against",
+					Required:    true,
+				},
+				// Required options must be listed first since optional parameters
+				// always come after when they're used.
+				// The same concept applies to Discord's Slash-commands API
+				{
+					Type:        discordgo.ApplicationCommandOptionString,
+					Name:        "book",
+					Description: "default liber-al",
+					Required:    false,
+				},
+				{
+					Type:        discordgo.ApplicationCommandOptionBoolean,
+					Name:        "sum",
+					Description: "Only return sum",
+					Required:    false,
+				},
+				{
+					Type:        discordgo.ApplicationCommandOptionNumber,
+					Name:        "count",
+					Description: "Number of results to return, max 32",
+					Required:    false,
+				},
+			},
+		},
 	}
-
-	if !strings.HasPrefix(m.Content, Conf.Botconfig.Prefix) {
-		fmt.Print("Prefix is: ", Conf.Botconfig.Prefix)
-		return
-	}
-
-	m.Content = strings.TrimPrefix(m.Content, Conf.Botconfig.Prefix)
-	// Remove whitespace from beginning and end of string
-	m.Content = strings.TrimSpace(m.Content)
-
-	// Take our message and pass it into parser
-	output, err := Parse(m.Content, 32, "liber-al")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	_, _ = s.ChannelMessageSend(m.ChannelID, output)
-
-}
+)

@@ -9,11 +9,16 @@ import (
 	"strconv"
 )
 
-func Parse(words string, count int, efsBook string) (string, error) {
+func Parse(words string, count int, efsBook string, sum bool) (string, error) {
 
 	i, err := alw.GetSum(words)
 	if err != nil {
 		log.Fatalln(err)
+	}
+
+	if sum {
+		output := "Sum for \"" + words + "\" in **" + efsBook + "**: " + strconv.Itoa(i)
+		return output, nil
 	}
 
 	var book map[string]interface{}
@@ -24,7 +29,8 @@ func Parse(words string, count int, efsBook string) (string, error) {
 
 	matches := alw.GetMatches(i, book)
 
-	output := "Sum: " + strconv.Itoa(i) + "\nFirst " + strconv.Itoa(count) + " matches in " + efsBook + ": "
+	output := "Results for \"" + words + "\" in **" + efsBook + "**:\n\n" +
+		"**Sum**: " + strconv.Itoa(i) + "\n**First " + strconv.Itoa(count) + " matches:** "
 
 	for k, v := range matches {
 		if count > 0 && k >= count {
