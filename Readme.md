@@ -1,8 +1,8 @@
 ## EQB - English Qabalah Bot
 
-This bot is based on the work of [tslight](https://github.com/tslight) and his [New Aeon English Qabalah CLI](https://github.com/tslight/naeq) 
+EQB is a Discord Bot that provides [ALW Cipher](https://en.wikipedia.org/wiki/English_Qabalah) results from the [Holy Books of Thelema](https://en.wikipedia.org/wiki/The_Holy_Books_of_Thelema).
 
-It provides a set of discord commands for retrieving the English Qabalah values of words and phrases from various sources (defaults to Liber AL vel Legis).
+It is based on the work of [tslight](https://github.com/tslight) and his [New Aeon English Qabalah CLI](https://github.com/tslight/naeq) 
 
 # Usage
 
