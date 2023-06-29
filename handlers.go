@@ -52,7 +52,7 @@ var (
 				return
 			}
 
-			s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
+			_ = s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
 				// Ignore type for now, they will be discussed in "responses"
 				Type: discordgo.InteractionResponseChannelMessageWithSource,
 				Data: &discordgo.InteractionResponseData{

@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/bwmarrin/discordgo"
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 	"os/signal"
@@ -38,7 +38,7 @@ func init() {
 
 func main() {
 	fmt.Println("\n\n|| Starting EQB - English Qabalah Bot ||")
-	log.SetOutput(ioutil.Discard)
+	log.SetOutput(io.Discard)
 
 	// Create a new Discord session using the provided bot token.
 	dg, err := discordgo.New("Bot " + Conf.DiscordConfig.Token)
@@ -103,5 +103,5 @@ func main() {
 	}
 
 	// Cleanly close down the Discord session.
-	dg.Close()
+	_ = dg.Close()
 }
