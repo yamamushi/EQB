@@ -7,7 +7,7 @@ cd $GOPATH/src/github.com/yamamushi/EQB
 
 # Build and tag
 docker build -t eqb-bot .
-docker tag eqb-bot yamamushi/eqb-bot:latest
+docker tag eqb-bot yamamushi/eqb-bot
 
 # Cleanup remote
 docker stop remote-eqbbot

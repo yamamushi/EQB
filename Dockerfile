@@ -6,7 +6,7 @@ FROM golang
 ADD . /go/src/github.com/yamamushi/EQB
 
 # Build the EQB command inside the container.
-RUN go install github.com/yamamushi/EQB@latest
+RUN cd /go/src/github.com/yamamushi/EQB && go get -v ./... && go build -v ./... && go install
 
 # Run the EQB command by default when the container starts.
 ENTRYPOINT /go/bin/EQB
