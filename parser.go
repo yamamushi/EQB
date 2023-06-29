@@ -21,6 +21,16 @@ func Parse(words string, count int, efsBook string, sum bool) (string, error) {
 		return output, nil
 	}
 
+	if efsBook != "liber-al" && efsBook != "liber-clvi" &&
+		efsBook != "liber-i" && efsBook != "liber-lxv" &&
+		efsBook != "liber-lxvi" && efsBook != "liber-vii" &&
+		efsBook != "liber-x" && efsBook != "liber-xcliber-xxvii" &&
+		efsBook != "liber-xxxi" {
+		return "Invalid book name chosen, **" + efsBook + "**, valid options are: " +
+			"liber-al, liber-clvi, liber-i, liber-lxv, liber-lxvi, liber-vii, liber-x, " +
+			"liber-xc, liber-xxvii, liber-xxxi", nil
+	}
+
 	var book map[string]interface{}
 	book, err = json.FromEFSPath(books.EFS, fmt.Sprint(efsBook, ".json"))
 	if err != nil {
