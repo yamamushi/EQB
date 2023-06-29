@@ -1,6 +1,6 @@
 ## EQB - English Qabalah Bot
 
-This bot is based on the work of tslight and his [New Aeon English Qabalah CLI](https://github.com/tslight/naeq) 
+This bot is based on the work of [tslight](https://github.com/tslight) and his [New Aeon English Qabalah CLI](https://github.com/tslight/naeq) 
 
 It provides a set of discord commands for retrieving the English Qabalah values of words and phrases from various sources (defaults to Liber AL vel Legis).
 
