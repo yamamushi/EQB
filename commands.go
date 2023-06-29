@@ -22,6 +22,8 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 	}
 
 	m.Content = strings.TrimPrefix(m.Content, Conf.Botconfig.Prefix)
+	// Remove whitespace from beginning and end of string
+	m.Content = strings.TrimSpace(m.Content)
 
 	// Take our message and pass it into parser
 	output, err := Parse(m.Content, 32, "liber-al")
