@@ -9,27 +9,7 @@ import (
 	"strconv"
 )
 
-/*
-var (
-	count   = flag.Int("n", 0, "number of matches to show")
-	path    = flag.String("p", "", "path to alternative book")
-	efsBook = flag.String("b", "liber-al", "embedded book")
-)
-*/
-
 func Parse(words string, count int, efsBook string) (string, error) {
-	/*
-		if list {
-			bookNames, err := efs.GetBaseNamesSansExt(&books.EFS)
-			if err != nil {
-				log.Fatalln(err)
-			}
-			for _, v := range bookNames {
-				fmt.Println(v)
-			}
-			return
-		}
-	*/
 
 	i, err := alw.GetSum(words)
 	if err != nil {
