@@ -21,11 +21,11 @@ var (
 			book := "liber-al"
 			words := ""
 			sum := false
-			var count int64 = 10 // default to 10
+			var count int64 = 16 // default to 10
 
 			// Get the value from the option map.
 			// When the option exists, ok = true
-			if option, ok := optionMap["words"]; ok {
+			if option, ok := optionMap["input"]; ok {
 				words = option.StringValue()
 			}
 

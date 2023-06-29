@@ -12,8 +12,8 @@ var (
 			Options: []*discordgo.ApplicationCommandOption{
 				{
 					Type:        discordgo.ApplicationCommandOptionString,
-					Name:        "words",
-					Description: "Words to search against",
+					Name:        "input",
+					Description: "Input word or phrase to generate results for",
 					Required:    true,
 				},
 				// Required options must be listed first since optional parameters
@@ -22,13 +22,13 @@ var (
 				{
 					Type:        discordgo.ApplicationCommandOptionString,
 					Name:        "book",
-					Description: "default liber-al",
+					Description: "Defaults to liber-al",
 					Required:    false,
 				},
 				{
 					Type:        discordgo.ApplicationCommandOptionBoolean,
 					Name:        "sum",
-					Description: "Only return sum",
+					Description: "Only return sum value (true or false)",
 					Required:    false,
 				},
 				{
